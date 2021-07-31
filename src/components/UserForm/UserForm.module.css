@@ -1,0 +1,14 @@
+.user-form {
+  width: 400px;
+  max-width: 80vw;
+  margin: 2em auto;
+  text-align: center;
+}
+
+.action {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+}

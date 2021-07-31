@@ -1,0 +1,16 @@
+.confirm {
+}
+
+.user-data {
+  margin-bottom: 2em;
+}
+.user-data p {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 1rem;
+}
+
+.user-data span {
+  color: gray;
+  font-size: 0.9rem;
+}

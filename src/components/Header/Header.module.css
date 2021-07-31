@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  align-items: center;
+  background: #1db3d0;
+  color: #ffffff;
+  text-align: center;
+  padding: 1.5em;
+}
+
+.burger {
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.title {
+  margin: 0 auto;
+  font-weight: 300;
+}
