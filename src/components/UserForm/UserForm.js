@@ -7,7 +7,7 @@ import Button from "../UI/Button";
 import Header from "../Header/Header";
 import classes from "./UserForm.module.css";
 
-const UserForm = (props) => {
+const UserForm = () => {
   const [userData, setUserData] = useState({
     step: 0,
     fName: "",
@@ -20,39 +20,9 @@ const UserForm = (props) => {
 
   const [step, setStep] = useState(0);
 
-  const firstNameHandler = (ev) => {
+  const changeHandler = (input) => (ev) => {
     setUserData((prevUserData) => {
-      return { ...prevUserData, fName: ev.target.value };
-    });
-  };
-
-  const lastNameHandler = (ev) => {
-    setUserData((prevUserData) => {
-      return { ...prevUserData, lName: ev.target.value };
-    });
-  };
-
-  const emailHandler = (ev) => {
-    setUserData((prevUserData) => {
-      return { ...prevUserData, email: ev.target.value };
-    });
-  };
-
-  const occupationHandler = (ev) => {
-    setUserData((prevUserData) => {
-      return { ...prevUserData, occupation: ev.target.value };
-    });
-  };
-
-  const cityHandler = (ev) => {
-    setUserData((prevUserData) => {
-      return { ...prevUserData, city: ev.target.value };
-    });
-  };
-
-  const bioHandler = (ev) => {
-    setUserData((prevUserData) => {
-      return { ...prevUserData, bio: ev.target.value };
+      return { ...prevUserData, [input]: ev.target.value };
     });
   };
 
@@ -83,9 +53,7 @@ const UserForm = (props) => {
         <form>
           {firstStep && (
             <FormUserDetails
-              firstNameChange={firstNameHandler}
-              lastNameChange={lastNameHandler}
-              emailChange={emailHandler}
+              onChange={changeHandler}
               fName={userData.fName}
               lName={userData.lName}
               email={userData.email}
@@ -93,9 +61,7 @@ const UserForm = (props) => {
           )}
           {secondStep && (
             <FormPersonalDetails
-              occupationChange={occupationHandler}
-              cityChange={cityHandler}
-              bioChange={bioHandler}
+              onChange={changeHandler}
               occupation={userData.occupation}
               city={userData.city}
               bio={userData.bio}

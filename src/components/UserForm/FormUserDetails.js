@@ -9,7 +9,7 @@ const FormUserDetails = (props) => {
           type="text"
           id="firstName"
           placeholder="First Name"
-          onChange={props.firstNameChange}
+          onChange={props.onChange("fName")}
           value={props.fName}
         />
       </div>
@@ -18,7 +18,7 @@ const FormUserDetails = (props) => {
           type="text"
           id="lastName"
           placeholder="Last Name"
-          onChange={props.lastNameChange}
+          onChange={props.onChange("lName")}
           value={props.lName}
         />
       </div>
@@ -27,7 +27,7 @@ const FormUserDetails = (props) => {
           type="text"
           id="email"
           placeholder="Email"
-          onChange={props.emailChange}
+          onChange={props.onChange("email")}
           value={props.email}
         />
       </div>

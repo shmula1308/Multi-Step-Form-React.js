@@ -8,7 +8,7 @@ const FormPersonalDetails = (props) => {
         <input
           type="text"
           placeholder="Occupation"
-          onChange={props.occupationChange}
+          onChange={props.onChange("occupation")}
           value={props.occupation}
         />
       </div>
@@ -16,7 +16,7 @@ const FormPersonalDetails = (props) => {
         <input
           type="text"
           placeholder="City"
-          onChange={props.cityChange}
+          onChange={props.onChange("city")}
           value={props.city}
         />
       </div>
@@ -24,7 +24,7 @@ const FormPersonalDetails = (props) => {
         <input
           type="text"
           placeholder="Bio"
-          onChange={props.bioChange}
+          onChange={props.onChange("bio")}
           value={props.bio}
         />
       </div>
